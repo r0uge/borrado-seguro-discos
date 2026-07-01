@@ -1,9 +1,10 @@
 #!/bin/bash
 #
-# borrado_seguro_v2.sh
-# Script de borrado seguro de discos para pendrive/CD booteable (live).
-# Basado en borrado_seguro_v1.sh (https://github.com/r0uge/Borrado_Seguro)
-# con correcciones de seguridad y robustez.
+# Autor: Agustin Alvarez
+# Descripcion: Script para el borrado seguro de discos locales magneticos, SSD y NVMe 
+# Requiere tener instalado:  nvme-cli, hdparm, coreutils (shred)
+# Version: 1.2 (1/07/2026)
+# Para pendrive/CD booteable (live).
 #
 # IMPORTANTE: Este script es DESTRUCTIVO e IRREVERSIBLE. Está pensado para
 # correr desde un medio live (pendrive/CD) que NO sea uno de los discos a
