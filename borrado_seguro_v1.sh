@@ -287,6 +287,14 @@ for disk in "${disks_to_wipe[@]}"; do
 done
 
 # ------------------------------------------------------------------
+# Crear particion persistente y guarda logs de borrado
+# ------------------------------------------------------------------
+mkdir -p /mnt/logs_persistentes 2>/dev/null
+mount LABEL=BORRADO_LOGS /mnt/logs_persistentes 2>/dev/null \
+    && cp "$REPORT" "$LOGFILE" /mnt/logs_persistentes/ \
+    && log "Certificado y log copiados a partición persistente BORRADO_LOGS."
+
+# ------------------------------------------------------------------
 # Resumen final
 # ------------------------------------------------------------------
 log "\n=== Resumen final ==="
